@@ -55,7 +55,7 @@ This web application combines multiple functionalities, including a calendar, ca
 
     Clone the repository:
 
-## git clone: https://github.com/MuchiriKinyua/School-Apps
+## git clone https://github.com/MuchiriKinyua/School-Apps
 
     Navigate into the project directory:
 
