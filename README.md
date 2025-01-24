@@ -24,7 +24,7 @@ This web application combines multiple functionalities, including a calendar, ca
 
 # Layout & Design
 
-The design is built around a flexbox layout for easy alignment of elements and responsive design. The app contains various sections like:
+## The design is built around a flexbox layout for easy alignment of elements and responsive design. The app contains various sections like:
 
     Calendar Section: Positioned to the right side of the page, featuring a basic calendar layout with a large date display.
     Calculator Section: Positioned with padding and rounded corners, with clean and sharp styles for buttons.
@@ -51,19 +51,19 @@ The design is built around a flexbox layout for easy alignment of elements and r
 
 # Installation
 
-To run this project locally, follow these steps:
+## To run this project locally, follow these steps:
 
     Clone the repository:
 
-git clone: https://github.com/MuchiriKinyua/School-Apps
+## git clone: https://github.com/MuchiriKinyua/School-Apps
 
     Navigate into the project directory:
 
-cd School-Apps
+## cd School-Apps
 
     Open the HTML file: Open index.html in your preferred browser.
 
-Usage
+# Usage
 
     Calendar: View the current month and navigate through the days.
     Calculator: Perform basic arithmetic calculations with the buttons.
@@ -74,12 +74,12 @@ Usage
     Weather: Enter a city to get current weather information.
     Sidebar: Use the sidebar to quickly jump between different sections.
 
-Customization
+# Customization
 
     Add new functionalities: You can expand the app with additional features, like adding a "notes" section or integrating a weather API for real-time data.
     Styling updates: Modify the styles.css file to change the app's theme, colors, fonts, etc.
     Localization: Customize the language options or currency selection based on user preferences.
 
-License
+# License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
