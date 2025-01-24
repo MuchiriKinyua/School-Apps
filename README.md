@@ -35,13 +35,13 @@ The design is built around a flexbox layout for easy alignment of elements and r
     Weather Section: Shows weather data with temperature, wind speed, and humidity.
 
 # Styling
-# General Style
+## General Style
 
     Global styles: Applied margin, padding, and box-sizing to ensure elements display consistently across all browsers.
     Gradient backgrounds: For a modern and appealing visual style.
     Flexible Layouts: Utilizes flex display for sections to align and distribute elements dynamically.
 
-# Component Styles
+## Component Styles
 
     Calendar: The calendar section is styled with a clean white background and rounded corners, with a large font for easy readability.
     Calculator: The calculator has a dark background with white buttons and highlighted operators for easy visibility.
@@ -55,7 +55,7 @@ To run this project locally, follow these steps:
 
     Clone the repository:
 
-git clone: (https://github.com/MuchiriKinyua/School-Apps
+git clone: https://github.com/MuchiriKinyua/School-Apps
 
     Navigate into the project directory:
 
