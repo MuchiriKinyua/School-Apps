@@ -1,9 +1,9 @@
 ![Screenshot from 2025-01-24 13-54-09](https://github.com/user-attachments/assets/ba613ac4-6e81-40e9-8de5-c49cd5932461)
 
-Web Application with Multiple Features
+# Web Application with Multiple Features
 
 This web application combines multiple functionalities, including a calendar, calculator, currency converter, dictionary, language translator, to-do list, weather app, and sidebar navigation. The app features a sleek design with modern user interactions, utilizing a mix of HTML, CSS, and JavaScript (or intended JS functionality).
-Features
+# Features
 
     Calendar: Displays a simple calendar interface.
     Calculator: A functional calculator for basic arithmetic operations.
@@ -15,14 +15,14 @@ Features
     Sidebar: Provides quick navigation links to different sections.
     Chatbot: A chatbot toggle feature for quick user interaction.
 
-Technologies
+# Technologies
 
     HTML: Structure and layout of the pages.
     CSS: Styles and responsive design for the application.
     JavaScript: For future dynamic functionality (like currency conversion, weather fetching, etc.).
     Font: Poppins for a clean, modern font style.
 
-Layout & Design
+# Layout & Design
 
 The design is built around a flexbox layout for easy alignment of elements and responsive design. The app contains various sections like:
 
@@ -34,14 +34,14 @@ The design is built around a flexbox layout for easy alignment of elements and r
     To-Do Section: A list of tasks, which users can add and check off with a simple interface.
     Weather Section: Shows weather data with temperature, wind speed, and humidity.
 
-Styling
-General Style
+# Styling
+# General Style
 
     Global styles: Applied margin, padding, and box-sizing to ensure elements display consistently across all browsers.
     Gradient backgrounds: For a modern and appealing visual style.
     Flexible Layouts: Utilizes flex display for sections to align and distribute elements dynamically.
 
-Component Styles
+# Component Styles
 
     Calendar: The calendar section is styled with a clean white background and rounded corners, with a large font for easy readability.
     Calculator: The calculator has a dark background with white buttons and highlighted operators for easy visibility.
@@ -49,17 +49,17 @@ Component Styles
     To-Do List: To-do items are styled with checkboxes and a line-through effect when tasks are marked as complete.
     Weather App: The weather card has gradient colors, icons, and clear visibility for weather data.
 
-Installation
+# Installation
 
 To run this project locally, follow these steps:
 
     Clone the repository:
 
-git clone https://github.com/yourusername/your-repo-name.git
+git clone: (https://github.com/MuchiriKinyua/School-Apps
 
     Navigate into the project directory:
 
-cd your-repo-name
+cd School-Apps
 
     Open the HTML file: Open index.html in your preferred browser.
 
