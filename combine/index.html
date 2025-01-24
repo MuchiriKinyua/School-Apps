@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <button onclick="showApp('calculator')">Calculator</button>
+            <button onclick="showApp('calendar')">Calendar</button>
+            <button onclick="showApp('currency')">Currency</button>
+            <button onclick="showApp('dictionary')">Dictionary</button>
+            <button onclick="showApp('kamusi')">Kamusi</button>
+            <button onclick="showApp('language')">Language</button>
+            <button onclick="showApp('todo')">To do List</button>
+            <button onclick="showApp('weather')">Weather</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div id="calculator" class="app">
+                <!-- Calculator HTML -->
+                <h1 class="name">Calculator</h1>
+                <div class="container">
+                    <div class="calculator">
+                        <form>
+                            <div class="display">
+                                <input type="text" name="display">
+                            </div>
+                            <div>
+                                <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                                <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1)" class="operator">
+                                <input type="button" value="." onclick="display.value += '.' " class="operator">
+                                <input type="button" value="/" onclick="display.value += '/' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="7" onclick="display.value += '7' ">
+                                <input type="button" value="8" onclick="display.value += '8' ">
+                                <input type="button" value="9" onclick="display.value += '9' ">
+                                <input type="button" value="*" onclick="display.value += '*' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="4" onclick="display.value += '4' ">
+                                <input type="button" value="5" onclick="display.value += '5' ">
+                                <input type="button" value="6" onclick="display.value += '6' ">
+                                <input type="button" value="-" onclick="display.value += '-' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="1" onclick="display.value += '1' ">
+                                <input type="button" value="2" onclick="display.value += '2' ">
+                                <input type="button" value="3" onclick="display.value += '3' ">
+                                <input type="button" value="+" onclick="display.value += '+' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="π" onclick="display.value += (Math.PI).toFixed(2)" class="operator">
+                                <input type="button" value="0" onclick="display.value += '0' ">
+                                <input type="button" value="="  onclick="display.value = eval(display.value)" class="equal operator">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="calendar" class="app">
+                <!-- Calendar HTML -->
+                <div class="hero">
+                    <div class="calendar-container">
+                        <h1 class="calendar-name">Calendar</h1>
+                        <div class="calendar">
+                            <div class="left">
+                                <p id="date"></p>
+                                <p id="day"></p>
+                            </div>
+                            <div class="right">
+                                <p id="month"></p>
+                                <p id="year"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                <script>
+                    const date = document.getElementById("date");
+                    const day = document.getElementById("day");
+                    const month = document.getElementById("month");
+                    const year = document.getElementById("year");
+
+                    const today = new Date();
+
+                    const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+                    const allMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                    date.innerHTML = (today.getDate()<10?"0":"") + today.getDate();
+                    day.innerHTML = weekDays[today.getDay()];
+                    month.innerHTML = allMonths[today.getMonth()];
+                    year.innerHTML = today.getFullYear();
+                </script>
+            </div>
+
+
+            <!-- currency -->
+            <!-- currency -->
+<div id="currency" class="app">
+    <h1 class="currency-head">Currency Convertor</h1>
+    <div class="currency-wrapper">
+        <form action="#">
+            <div class="amount">
+                <p>Enter Amount: </p>
+                <input type="text" value="1">
+            </div>
+            <div class="drop-list">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="America Flag">
+                        <select>
+                            <option value="USD">USD</option>
+                            <option value="NPR">NPR</option>
+                            <option value="INR">INR</option>
+                            <option value="KES">KES</option>
+                            <option value="MAD">MAD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg" alt="Kenya Flag">
+                        <select>
+                            <option value="USD">USD</option>
+                            <option value="NPR">NPR</option>
+                            <option value="INR">INR</option>
+                            <option value="KES">KES</option>
+                            <option value="MAD">MAD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchange-rate">Getting exchange rate...</div>
+            <button>Get Exchange Rate</button>
+        </form>
+    </div>
+</div>
+
+
+            <!-- dictionary -->
+    <div class="dictionary-container">
+        <div id="dictionary" class="app">
+            <h1 class="dictionary-heading">Dictionary</h1>
+            <div class="dictionary-wrapper">
+                <div class="search">
+                    <input type="text" placeholder="Search a word">
+                    <i class="fas fa-search"></i>
+                    <span class="material-icons">close</span>
+                </div>
+                <p class="info-text">
+                    Type a word and press enter to get the meaning, example, pronunciation, and synonyms of that typed word
+                </p>
+                <ul>
+                    <li class="word">
+                        <div class="details">
+                            <p>_</p>
+                            <span>___</span>
+                        </div>
+                        <i class="fas fa-volume-up"></i>
+                    </li>
+                    <div class="content">
+                        <li class="meaning">
+                            <div class="details">
+                                <p>Meaning</p>
+                                <span>___</span>
+                            </div>
+                        </li>
+                        <li class="example">
+                        <div class="details">
+                            <p>Example</p>
+                            <span>___</span>
+                        </div>
+                    </li>
+                    <li class="synonyms">
+                    <div class="details">
+                            <p>Synonyms</p>
+                            <div class="list"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+            
+            <!-- kamusi -->
+            <div id="kamusi" class="app">
+                <h1 class="kamusi-heading">Kamusi</h1>
+                <div class="kamusi-wrapper">
+                    <div class="search">
+                        <input type="text" placeholder="Tafuta neno">
+                        <i class="fas fa-search"></i>
+                        <span class="material-icons">close</span>
+                    </div>
+                    <p class="info-text">
+                        Andika neno na bonyeza Enter ili upate maana, mfano, matamshi, na visawe vya neno ulilotafuta.
+                    </p>
+                    <ul>
+                        <li class="word">
+                            <div class="details">
+                                <p>_</p>
+                                <span>___</span>
+                            </div>
+                            <i class="fas fa-volume-up"></i>
+                        </li>
+                        <div class="content">
+                            <li class="meaning">
+                                <div class="details">
+                                    <p>Maana</p>
+                                    <span>___</span>
+                                </div>
+                            </li>
+                            <li class="example">
+                            <div class="details">
+                                <p>Mfano</p>
+                                <span>___</span>
+                            </div>
+                        </li>
+                        <li class="synonyms">
+                        <div class="details">
+                                <p>Visawe</p>
+                                <div class="list"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- language -->
+            <div id="language" class="app">
+                <h1 class="language-heading">Language Translator</h1>
+                <div class="language-container">
+                <div class="language-wrapper">
+                    <div class="text-input">
+                        <textarea class="from-text" placeholder="Enter Text"></textarea>
+                        <textarea class="to-text" placeholder="Translation" readonly disabled></textarea>
+                    </div>
+                    <ul class="controls">
+                        <li class="row from">
+                            <div class="icons">
+                                <i id="from" class="fas fa-volume-up"></i>
+                                <i id="from" class="fas fa-copy"></i>
+                            </div>
+                            <select></select>
+                        </li>
+                        <li class="exchange"><i class="fas fa-exchange-alt"></i>
+                        </li>                
+                        <li class="row to">
+                            <select></select>
+                            <div class="icons">
+                                <i id="to" class="fas fa-volume-up"></i>
+                                <i id="to" class="fas fa-copy"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+
+            <!-- todo -->
+        <div id="todo" class="app">
+            <div class="todo-container">
+                <div class="todo-app">
+                    <h2>Muchiri Kinyua To-Do List <img src="images/icon.png" alt="icon"></h2>
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add your text">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="list-container"></ul>
+                </div>
+            </div>
+        </div>
+
+
+
+            <!-- weather -->
+            <div id="weather" class="app">
+            <h1 class="weather-head">Weather App</h1>
+                <div class="card">
+                    <div class="search">
+                        <input type="text" placeholder="Enter city name" spellcheck="false">
+                        <button><img src="images/search.png" alt="Search"></button>
+                    </div>
+                    <div class="error">
+                        <p>Invalid city name</p>
+                    </div>
+                    <div class="weather">
+                        <img src="images/rain.png" class="weather-icon" alt="Weather Icon">
+                        <h1 class="temp">17°c</h1>
+                        <h2 class="city">Nairobi</h2>
+                        <div class="details">
+                            <div class="col">
+                                <img src="images/humidity.png" alt="Humidity Icon">
+                                <div>
+                                    <p class="humidity">50%</p>
+                                    <p>Humidity</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <img src="images/wind.png" alt="Wind Speed Icon">
+                                <div>
+                                    <p class="wind">15 knots</p>
+                                    <p>Wind Speed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+     <script>
+        function showApp(app) {
+            const apps = document.querySelectorAll('.app');
+            apps.forEach(appElement => appElement.style.display = 'none');
+            document.getElementById(app).style.display = 'block';
+        }
+
+        // Show the calculator by default when the page loads
+        showApp('calculator');
+     </script>
+
+<button class="chatbot-toggler">
+    <span class="material-symbols-outlined">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+</button>
+<div class="chatbot">
+    <header>
+        <h2>School Apps ChatBot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+        <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋🏾 <br> How can I help you today?</p>
+        </li>
+    </ul>
+    <div class="chat-input">
+        <textarea placeholder="Enter a message..."></textarea>
+        <span id="send-btn" class="material-symbols-outlined">Send</span>
+    </div>
+</div>
+
+    <script>
+        document.querySelector('.chatbot-toggler').addEventListener('click', () => {
+            document.body.classList.toggle('show-chatbot');
+        });
+    
+        document.querySelector('.chatbot .close-btn').addEventListener('click', () => {
+            document.body.classList.remove('show-chatbot');
+        });
+    </script>
+
+<script src="js/country-list.js"></script>
+<script src="js/script.js"></script>
+<script src="dictionary/script.js"></script>
+<script src="kamusi/script.js"></script>
+<script src="language/countries.js"></script>
+<script src="language/script.js"></script>
+<script src="todo/script.js"></script>
+<script src="weather/script.js"></script>
+    
+
+</body>
+</html>
